@@ -15,7 +15,6 @@ export const promise = async (_: Request, res: Response) => {
 
 export const loop = () => {
   let i = 0;
-  console.log('asd');
   for (let index = 0; index < 5e9; index++) {
     i++;
   }
@@ -24,7 +23,7 @@ export const loop = () => {
 
 export const workerThreadLoop = async () => {
   console.log('asd');
-    const worker = new Worker(join(__dirname, 'worker.js'));
+    const worker = new Worker(join(__dirname, '..', 'dist/src', 'worker.js'));
     worker?.postMessage({
       message: 'test'
     })
