@@ -22,7 +22,6 @@ export const loop = () => {
 }
 
 export const workerThreadLoop = async () => {
-  console.log('asd');
     const worker = new Worker(join(__dirname, '..', 'dist/src', 'worker.js'));
     worker?.postMessage({
       message: 'test'
